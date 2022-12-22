@@ -12,7 +12,7 @@ class Intersection{
 
     draw(ctx) {
         ctx.strokeStyle = this.color;
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(this.x, Intersection.SCREEN_HEIGHT/2 - (Intersection.SCREEN_HEIGHT / this.dist) * 10);
         ctx.lineTo(this.x, Intersection.SCREEN_HEIGHT/2 + (Intersection.SCREEN_HEIGHT / this.dist) * 10);
