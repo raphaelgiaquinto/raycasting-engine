@@ -5,7 +5,7 @@ A little raycasting engine made by someone who sucks in maths ... (it's me)
 
 I had wanted to do raycasting for a long time. The problem is, I'm not good at math. 
 I understood the principle of raycasting but the examples I found on the internet used too many obscure calculations that I had trouble understanding. 
-So, I made something with my basic knowledge in maths, and finally it works pretty well. 
+So, I made something with my basic knowledge in maths, without any libraries dedicated to calculations, drawing or anything. It is only native javascript.
 
 ## How it works
 
