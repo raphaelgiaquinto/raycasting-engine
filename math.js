@@ -11,6 +11,9 @@ class Point{
         this.x -= point.x;
         this.y -= point.y;
     }
+    static add(a, b) {
+        return new Point(a.x + b.x, a.y + b.y);
+    }
 }
 
 function radian(angle) {

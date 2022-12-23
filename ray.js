@@ -43,8 +43,17 @@ window.addEventListener("mouseup", (e)=>{
     obstacles.push(new Obstacle(a, b, color()));
 });
 
-registerInput('z', () => camera.forward());
-registerInput('s', () => camera.backward());
+
+registerInput('z', () => {
+    if(!camera.collisions(obstacles)){
+        camera.forward();
+    }
+});
+registerInput('s', () => { 
+    if(!camera.collisions(obstacles)){
+        camera.backward();
+    } 
+});
 registerInput('q', () => camera.rotate(-3));
 registerInput('d', () => camera.rotate(3));
 

@@ -7,7 +7,7 @@ class Camera{
         this.direction = new Point(1, 0);
         this.marker = new Point(x+50, y);
         this.rays = [];
-        this.distProjection = 100;
+        this.distProjection = nbRays;
         this.nbRays = nbRays;
         this.intersections = [];
         this.drawRays = false;
@@ -97,5 +97,15 @@ class Camera{
                 }
             }
         }
+    }
+
+    collisions(obstacles) {
+        for(var j = 0; j < obstacles.length; j++) {
+            var intersection = intersect(this.pos, Point.add(this.pos, this.direction), obstacles[j].a,  obstacles[j].b);
+            if(intersection) {
+               return true;
+            }
+        }
+        return false;
     }
 }
